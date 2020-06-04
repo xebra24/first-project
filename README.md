@@ -6,4 +6,4 @@ My name is Alex, I'm a high schooler and I'm teaching myself how to code. At the
 vocabulary of languages in the future.
 
 As far as this project is concerned, it's pretty basic. You are asked how many pancakes each person ate. You can then review your 
-entries and if it is incorrect, you can edit them.
+entries and if it is incorrect, you can edit them. The planned additions are in planned-additions.txt.
