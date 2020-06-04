@@ -12,6 +12,9 @@ extern int person_who_ate_most;
 extern int person_who_ate_least;
 
 //FUNCTIONS
-void get_nums_of_pancakes();
 int who_ate_most();
 int who_ate_least();
+void get_nums_of_pancakes();
+void review_entries();
+void display_person_who_ate_least();
+void display_person_who_ate_most();
