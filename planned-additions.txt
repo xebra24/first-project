@@ -1,0 +1,9 @@
+So far, these are the implemented features:
+ - Input and display how many pancakes each person ate
+ - Display who ate the least and who ate the fewest
+ - Allow user to edit how many pancakes a user ate (but not with the ease I would like)
+Planned additions:
+ - Input which user you would like to adjust
+ - Average and median number of pancakes eaten
+ - Ordered list of who has eaten the most
+ - Allow user to input how many people there are
