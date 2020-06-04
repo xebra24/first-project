@@ -13,15 +13,8 @@ int person_who_ate_least = 0;
 
 int main() {
     get_nums_of_pancakes();
-    person_who_ate_most = who_ate_most();
-    std::cout << "Person " << who_ate_most() << " ate the most pancakes with " << num_eaten_pancakes[person_who_ate_most - 1] << " eaten." << std::endl;
-
-    person_who_ate_least = who_ate_least();
-    std::cout << "Person " << who_ate_least() << " ate the least pancakes with " << num_eaten_pancakes[person_who_ate_least - 1] << " eaten." << std::endl;
+    display_person_who_ate_most();
+    display_person_who_ate_least();
+    review_entries();
     return 0;
 }
-
-/*TO FIX:
- - Ask user to review inputs, then allow them to edit it
- - Ordered list of who at most
- */
