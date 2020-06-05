@@ -80,3 +80,9 @@ void display_person_who_ate_least() {
     std::cout << "Person " << who_ate_least() << " ate the least pancakes with " 
         << num_eaten_pancakes[(__int64)person_who_ate_least - 1] << " eaten." << std::endl;
 }
+
+void wait_to_exit() {
+    std::string input;
+    std::cout << "Press any letter key to end the program. . . \n";
+    std::cin >> input;
+}
