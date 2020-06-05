@@ -16,5 +16,5 @@ int main() {
     display_person_who_ate_most();
     display_person_who_ate_least();
     review_entries();
-    return 0;
+    wait_to_exit();
 }
