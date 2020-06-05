@@ -18,3 +18,4 @@ void get_nums_of_pancakes();
 void review_entries();
 void display_person_who_ate_least();
 void display_person_who_ate_most();
+void wait_to_exit();
