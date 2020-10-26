@@ -129,6 +129,10 @@ void choose() {
         viewOldData();  // mainFuncs.cpp
         waitToExit();
     }
+    
+    else if (choice[0] == '3') {
+        return;
+    }
 
     else {
         std::cerr << "Your entry is invalid, please try again.\n" << std::endl;
