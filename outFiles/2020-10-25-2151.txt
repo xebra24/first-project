@@ -1,0 +1,14 @@
+Person 1 ate 9 pancakes.
+Person 2 ate 1 pancake.
+Person 3 ate 5 pancakes.
+Person 4 ate 3 pancakes.
+Person 5 ate 4 pancakes.
+
+
+Ordered list:
+
+Person 2 ate 1 pancake.
+Person 4 ate 3 pancakes.
+Person 5 ate 4 pancakes.
+Person 3 ate 5 pancakes.
+Person 1 ate 9 pancakes.
