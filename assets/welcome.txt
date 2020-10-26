@@ -1,0 +1,8 @@
+WELCOME!
+
+This program was written by xebra24, and is hosted on GitHub: https://github.com/xebra24/first-project
+It is not subject to copyright and is free use.
+
+This project is based on the Pancake Glutton project idea on this forum: http://www.cplusplus.com/forum/articles/12974/
+
+************************************************************************************************************************

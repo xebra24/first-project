@@ -1,0 +1,8 @@
+NOTE: Saved files are stored in the outFiles directory of the program.
+
+Please select an option!
+1. Input some new data.
+2. Review and edit some old data. (NOT FUNCTIONAL)
+3. Exit program
+
+To chose, type 1, 2 or 3 and then press enter.
