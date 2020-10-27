@@ -5,4 +5,4 @@ Please select an option!
 2. Review and edit some old data. (NOT FUNCTIONAL)
 3. Exit program
 
-To chose, type 1, 2 or 3 and then press enter.
+To choose, type 1, 2 or 3 and then press enter.
