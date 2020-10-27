@@ -2,7 +2,7 @@
 
 #include "Person.h"
 
-// Get many pancakes eaten
+// Get how many pancakes eaten
 void Person::getPancakesConsumed(Person& p) {
     std::cout << "How many pancakes did person " << 
     p.returnPersonNumber() << " consume? ";
