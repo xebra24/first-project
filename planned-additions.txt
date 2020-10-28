@@ -3,8 +3,10 @@ So far, these are the implemented features:
  - Display who ate the least and who ate the fewest
  - Ordered list of who has eaten the most
  - Allow user to input how many people there are
+ - Allow user to edit how many pancakes a user ate
+
 Planned additions:
  - Input which user you would like to adjust
  - Average and median number of pancakes eaten
- - Allow user to edit how many pancakes a user ate (present in previous versions, but not in updated version. Will be added soon.)
- - Display who ate the least and who ate the fewest (present in previous versions, but not in updated version. Will be added soon.)
+ - src folder to clean up files
+ - Review inputs from previous sessions

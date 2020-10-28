@@ -20,3 +20,4 @@ void fileOut(std::string file_loc);
 void choose();
 void saveInput();
 void viewOldData();
+std::vector<Person> editEntries(std::vector<Person>& vec);

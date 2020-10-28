@@ -17,7 +17,7 @@ void getPeople() {
     std::cin >> numPeople;
     std::cout << std::endl;
 
-    for (int i = 0; i < numPeople; ++i) {
+    for (int i = 1; i <= numPeople; ++i) {
         Person person(i, 0);
         people.push_back(person);
     }
@@ -39,10 +39,26 @@ void check() {
             element.printPancakesEaten(std::cout, element);             // Person.cpp
         }
         std::cout << std::endl;
+
+        std::vector<char> yes_or_no2 (1);
+        std::cout << "Is this correct? y/n: ";
+        std::cin >> yes_or_no2[0];
+
+        if (yes_or_no2[0] == 'N' || yes_or_no2[0] == 'n') {
+            editEntries(people);
+        }
+
+        else if (yes_or_no2[0] == 'Y' || yes_or_no2[0] == 'y') {
+            return;
+        }
+
+        else { // TODO: Add function to go back to beginning of if statement
+            std::cout << "Your entry is invalid, please try again.";
+        }
     }
 
     else if (yes_or_no[0] == 'n' || yes_or_no[0] == 'N') {
-        sortPeople();
+        return;
     }
     
     else {
@@ -77,7 +93,7 @@ void sortPeople() {
     }
     
     else if (yes_or_no[0] == 'n' || yes_or_no[0] == 'N') {
-        saveInput();
+        return;
     }
     
     else {
@@ -209,4 +225,15 @@ void viewOldData() {
     else {
         std::cerr << "Error opening file!" << std::endl;
     }
+}
+
+std::vector<Person> editEntries(std::vector<Person>& vec) {
+    int personToEdit;
+    std::cout << "Please type the number of the person to edit: ";
+    std::cin >> personToEdit;
+    std::cout << std::endl;
+
+    people[personToEdit].getPancakesConsumed(people[personToEdit - 1]);
+
+    return people;
 }

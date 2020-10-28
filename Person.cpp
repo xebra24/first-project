@@ -16,7 +16,7 @@ int Person::returnPancakesConsumed() const {
 
 // Return person num
 int Person::returnPersonNumber() const {
-    return personNum + 1;
+    return personNum;
 }
 
 // Print how many pancakes person [x] ate
