@@ -4,6 +4,8 @@
 
 #include "Person.h"
 
+using std::vector;
+
 extern vector<Person> people;      // Defined mainFuncs.cpp
 extern const string welcome_txt;    // Defined main.cpp    
 extern const string choice_txt;     // Defined main.cpp 
