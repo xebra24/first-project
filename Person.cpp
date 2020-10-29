@@ -2,11 +2,14 @@
 
 #include "Person.h"
 
+using std::cout;
+using std::cin;
+
 // Get how many pancakes eaten
 void Person::getPancakesConsumed(Person& p) {
-    std::cout << "How many pancakes did person " << 
+    cout << "How many pancakes did person " << 
     p.returnPersonNumber() << " consume? ";
-    std::cin >> p.pancakesConsumed;
+    cin >> p.pancakesConsumed;
 }
 
 // How many pancakes eaten

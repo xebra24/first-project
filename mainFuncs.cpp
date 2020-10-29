@@ -8,14 +8,17 @@
 #include "header.h"
 #include "Person.h"
 
-std::vector<Person> people;     // Declared extern, header.h
+using std::vector; using std::cout;
+using std::cin; using std::string;
 
-// Add user-specified number of people to std::vector<Person> people;
+vector<Person> people;     // Declared extern, header.h
+
+// Add user-specified number of people to vector<Person> people;
 void getPeople() {
     int numPeople;
-    std::cout << "\nHow many people are there? ";
-    std::cin >> numPeople;
-    std::cout << std::endl;
+    cout << "\nHow many people are there? ";
+    cin >> numPeople;
+    cout << std::endl;
 
     for (int i = 1; i <= numPeople; ++i) {
         Person person(i, 0);
@@ -29,20 +32,20 @@ void getPeople() {
 
 // Allow user to check their entries
 void check() {
-    std::vector<char> yes_or_no (1);
-    std::cout << "\nDo you want to check your entries? y/n: ";
-    std::cin >> yes_or_no[0];
-    std::cout << std::endl;
+    vector<char> yes_or_no (1);
+    cout << "\nDo you want to check your entries? y/n: ";
+    cin >> yes_or_no[0];
+    cout << std::endl;
 
     if (yes_or_no[0] == 'y' || yes_or_no[0] == 'Y') {
         for (auto const& element : people) {
-            element.printPancakesEaten(std::cout, element);             // Person.cpp
+            element.printPancakesEaten(cout, element);             // Person.cpp
         }
-        std::cout << std::endl;
+        cout << std::endl;
 
-        std::vector<char> yes_or_no2 (1);
-        std::cout << "Is this correct? y/n: ";
-        std::cin >> yes_or_no2[0];
+        vector<char> yes_or_no2 (1);
+        cout << "Is this correct? y/n: ";
+        cin >> yes_or_no2[0];
 
         if (yes_or_no2[0] == 'N' || yes_or_no2[0] == 'n') {
             editEntries(people);
@@ -53,7 +56,7 @@ void check() {
         }
 
         else { // TODO: Add function to go back to beginning of if statement
-            std::cout << "Your entry is invalid, please try again.";
+            cout << "Your entry is invalid, please try again.";
         }
     }
 
@@ -78,17 +81,17 @@ bool sortPNum(const Person& lhs, const Person& rhs) {
 }
 
 // Check if user wants ordered list, if yes returns sorted
-// std::vector<People> people, low to high, otherwise exits program.
+// vector<People> people, low to high, otherwise exits program.
 void sortPeople() {
-    std::vector<char> yes_or_no (1);
-    std::cout << "Would you like an ordered list? y/n: ";
-    std::cin >> yes_or_no[0];
+    vector<char> yes_or_no (1);
+    cout << "Would you like an ordered list? y/n: ";
+    cin >> yes_or_no[0];
 
     if (yes_or_no[0] == 'y' || yes_or_no[0] == 'Y') {
-        std::cout << std::endl;
+        cout << std::endl;
         std::sort(people.begin(), people.end(), sortPancakes);
         for (auto& element : people) {
-            element.printPancakesEaten(std::cout, element);             // Person.cpp
+            element.printPancakesEaten(cout, element);             // Person.cpp
         }
     }
     
@@ -97,7 +100,7 @@ void sortPeople() {
     }
     
     else {
-        std::cout << "Your entry is invalid, please try again.\n";
+        cout << "Your entry is invalid, please try again.\n";
         sortPeople();
     }
     std::sort(people.begin(), people.end(), sortPNum); // Reset ordering of people
@@ -105,21 +108,21 @@ void sortPeople() {
 
 // Don't immediately exit
 void waitToExit() {
-    std::string input;
-    std::cout << "\nType anything, then press enter to exit program." << std::endl;
-    std::cin >> input;
+    string input;
+    cout << "\nType anything, then press enter to exit program." << std::endl;
+    cin >> input;
 }
 
 // Output contents of specified file
-void fileOut(std::string file_loc) {
-    std::string message;
+void fileOut(string file_loc) {
+    string message;
     std::ifstream out;
     out.open(file_loc);
 
     if (out.is_open()) {
         // Print welcome message in welcome.txt
         while (std::getline (out, message)) {
-            std::cout << message << std::endl;
+            cout << message << std::endl;
         }
     }
 }
@@ -128,8 +131,8 @@ void fileOut(std::string file_loc) {
 void choose() {
     fileOut(choice_txt);
 
-    std::vector<char> choice (1);
-    std::cin >> choice[0];
+    vector<char> choice (1);
+    cin >> choice[0];
 
     // If creating new data
     if (choice[0] == '1') {
@@ -158,9 +161,9 @@ void choose() {
 
 // Save user input to file (only one file at a time, for now)
 void saveInput() {
-    std::vector<char> yes_or_no (1);
-    std::cout << "\nWould you like to save your input? y/n: ";
-    std::cin >> yes_or_no[0];
+    vector<char> yes_or_no (1);
+    cout << "\nWould you like to save your input? y/n: ";
+    cin >> yes_or_no[0];
 
     if (yes_or_no[0] == 'y' || yes_or_no[0] == 'Y') {
         // Get current time to name file
@@ -191,7 +194,7 @@ void saveInput() {
             }
 
             std::sort(people.begin(), people.end(), sortPNum); // Reset ordering of people
-            std::cout << "Done." << std::endl;
+            cout << "Done." << std::endl;
         }
 
         else {
@@ -202,7 +205,7 @@ void saveInput() {
     }
     
     else if (yes_or_no[0] == 'n' || yes_or_no[0] == 'N') {
-        std::cout << "Goodbye!" << std::endl;
+        cout << "Goodbye!" << std::endl;
         return;
     }
     
@@ -214,10 +217,10 @@ void saveInput() {
 
 void viewOldData() {
     std::ifstream out ("outFiles/2020-10-25-1153.txt");
-    std::string line;
+    string line;
     if (out.is_open()) {
         while (std::getline(out, line)) {
-            std::cout << line << '\n';
+            cout << line << '\n';
         }
         out.close();
     }
@@ -227,11 +230,11 @@ void viewOldData() {
     }
 }
 
-std::vector<Person> editEntries(std::vector<Person>& vec) {
+vector<Person> editEntries(vector<Person>& vec) {
     int personToEdit;
-    std::cout << "Please type the number of the person to edit: ";
-    std::cin >> personToEdit;
-    std::cout << std::endl;
+    cout << "Please type the number of the person to edit: ";
+    cin >> personToEdit;
+    cout << std::endl;
 
     people[personToEdit].getPancakesConsumed(people[personToEdit - 1]);
 
