@@ -6,7 +6,6 @@ So far, these are the implemented features:
  - Allow user to edit how many pancakes a user ate
 
 Planned additions:
- - Input which user you would like to adjust
  - Average and median number of pancakes eaten
  - src folder to clean up files
  - Review inputs from previous sessions
