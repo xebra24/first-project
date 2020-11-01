@@ -4,8 +4,8 @@ So far, these are the implemented features:
  - Ordered list of who has eaten the most
  - Allow user to input how many people there are
  - Allow user to edit how many pancakes a user ate
+ - Average and median number of pancakes eaten
+ - Review inputs from previous sessions (currently in ALPHA)
 
 Planned additions:
- - Average and median number of pancakes eaten
- - src folder to clean up files
- - Review inputs from previous sessions
+ - Review inputs from previous sessions (currently in ALPHA)
