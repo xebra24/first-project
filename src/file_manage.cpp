@@ -62,13 +62,14 @@ void saveInput()
             {
                 for (auto const element : people) 
                 {
-                    // Store pancakes eaten in outFile.txt
+                    // Store pancakes eaten in output file
                     element.printPancakesEaten(out_file, element);
                 }
 
                 out_file << std::endl;
 
-                // Ordered list in outFile.txt
+                // Ordered list in the output file
+
                 out_file << "\nOrdered list:\n\n";
                 std::sort(people.begin(), people.end(), sortPancakes);
 
@@ -79,6 +80,37 @@ void saveInput()
 
                 std::sort(people.begin(), people.end(), sortPNum); // Reset ordering of people
                 cout << "Done." << std::endl;
+
+                //Basic statistics in the output file
+
+                std::sort(people.begin(), people.end(), sortPancakes);
+        
+                int sum = 0, num_people = 0;
+                double average = 0, median_person = 0, median = 0;
+
+                for (auto& element : people) 
+                {
+                    sum += element.returnPancakesConsumed();
+                    ++num_people;
+                }
+
+                if (num_people % 2)
+                {
+                    median = (people.at(people.size() / 2).returnPancakesConsumed() + people.at((people.size() / 2) + 1).returnPancakesConsumed()) / 2;
+                }
+
+                else
+                {
+                    median = people.at(people.size() / 2).returnPancakesConsumed();
+                }
+
+                average = sum / num_people;
+
+                out_file << "\nThe average number of pancakes consumed is "
+                         << average << ".\n";
+                
+                out_file << "\nThe median number of pancakes consumed is "
+                         << median << ".\n";
             }
 
             else 

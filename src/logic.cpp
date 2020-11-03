@@ -1,5 +1,5 @@
 /*
-Functions that are primarily doing things
+Functions that are primarily not doing things with the user
 */
 
 #include <iostream>
@@ -50,10 +50,10 @@ void basicStatistics(vector<Person>& p)
         average = sum / num_people;
 
         cout << "\nThe average number of pancakes consumed is "
-            << average << ".\n";
+             << average << ".\n";
         
         cout << "\nThe median number of pancakes consumed is "
-            << median << ".\n\n";
+             << median << ".\n\n";
 
         std::sort(p.begin(), p.end(), sortPNum); // Reset ordering of people
     }
@@ -151,7 +151,7 @@ void choose()
     // Otherwise we review old .txt output file (NOT FUNCTIONAL)
     else if (choice[0] == '2') 
     {
-        viewOldData();  // mainFuncs.cpp
+        viewOldData();  // ui.cpp
         waitToExit();
     }
     
@@ -195,5 +195,6 @@ void sortPeople()
         cout << "Your entry is invalid, please try again.\n";
         sortPeople();
     }
+
     std::sort(people.begin(), people.end(), sortPNum); // Reset ordering of people
 }

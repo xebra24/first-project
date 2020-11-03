@@ -1,5 +1,5 @@
 /*
-Functions that are primarily outputting things
+Functions that are primarily outputting things/interacting with user
 */
 
 #include <iostream>
@@ -34,7 +34,7 @@ void getPeople()
 
     for (auto& element : people) 
     {
-        element.getPancakesConsumed(element);                       // Person.cpp
+        element.getPancakesConsumed(element);       // Person.cpp
     }
 }
 
