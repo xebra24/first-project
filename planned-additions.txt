@@ -9,3 +9,4 @@ So far, these are the implemented features:
 
 Planned additions:
  - Review inputs from previous sessions (currently in ALPHA)
+ - May implement a basic UI, but not any time soon
