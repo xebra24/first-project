@@ -2,6 +2,7 @@ main.exe
 .vscode/
 mainFuncs.exe
 logic.exe
-file_manage.exe
+file_management.exe
 person.exe
 ui.exe
+/out_files/

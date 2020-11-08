@@ -1,11 +1,12 @@
 #include <string>
 #include <vector>
 #include <filesystem>
+#include <iostream>
 
 #include "ui.h"
 #include "logic.h"
 #include "Person.h"
-#include "file_manage.h"
+#include "file_management.h"
 #include "header.h"
 
 using std::string;
@@ -17,9 +18,9 @@ const string welcome_txt = "assets/welcome.txt";
 const string choice_txt = "assets/initialUserChoice.txt";
 vector<Person> people;
 
-int main() 
+int main()
 {
-    fileOut(welcome_txt);   
-    choose();               
+    printFileContents(welcome_txt);
+    choose();
     return 0;
 }

@@ -1,6 +1,7 @@
 #pragma once
 
-class Person {
+class Person
+{
     // DATA MEMBERS
     unsigned int personNum;
     unsigned int pancakesConsumed;
@@ -8,14 +9,14 @@ class Person {
 public:
     // CONSTRUCTORS
     Person() = default;
-    Person(int n, int p): personNum(n), pancakesConsumed(p) { }
-    
+    Person(int n) : personNum(n) {}
+
     // METHODS
     // Setting member values
-    void getPancakesConsumed(Person& p);
+    void getPancakesConsumed(Person &p);
 
     // Returning member values
     int returnPancakesConsumed() const;
     int returnPersonNumber() const;
-    void printPancakesEaten(std::ostream& out, const Person& p) const;
+    void printPancakesEaten(std::ostream &out, const Person &p) const;
 };
