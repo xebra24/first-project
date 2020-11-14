@@ -6,4 +6,3 @@ file_management.exe
 person.exe
 ui.exe
 out_files/*
-!out_files/.gitkeep

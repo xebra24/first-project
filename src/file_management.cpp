@@ -125,17 +125,17 @@ void writeToFile(string file_name)
 // Save user input to file
 void saveInput()
 {
-    vector<char> yes_or_no(1);
+    string yes_or_no;
     cout << "\nWould you like to save your input? y/n: ";
-    cin >> yes_or_no[0];
+    cin >> yes_or_no;
 
-    if (yes_or_no[0] == 'y' || yes_or_no[0] == 'Y')
+    if (yes_or_no == "y" || yes_or_no == "Y")
     {
-        vector<char> yes_or_no2(1);
+        string yes_or_no2;
         cout << "\nWould you like a custom name for the file? y/n (if n, the time will be used): ";
-        cin >> yes_or_no2[0];
+        cin >> yes_or_no2;
 
-        if (yes_or_no2[0] == 'y' || yes_or_no2[0] == 'Y')
+        if (yes_or_no2 == "y" || yes_or_no2 == "Y")
         {
             string file_name = "./out_files/";
             string temp;
@@ -147,7 +147,7 @@ void saveInput()
             writeToFile(file_name);
         }
 
-        else if (yes_or_no2[0] == 'n' || yes_or_no2[0] == 'N')
+        else if (yes_or_no2 == "n" || yes_or_no2 == "N")
         {
             // Get current time to name file
             time_t t = time(0);
@@ -193,7 +193,7 @@ void showOutFiles()
 
     for (auto element : files)
     {
-        if (!(element.first == counter))
+        if (!(element.first == choice))
         {
             ++counter;
         }

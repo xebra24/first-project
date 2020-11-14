@@ -1,7 +1,3 @@
-/*
-Functions that are primarily not doing things with the user
-*/
-
 #include <iostream>
 #include <vector>
 #include <fstream>
@@ -19,11 +15,11 @@ using std::vector;
 
 void basicStatistics()
 {
-    vector<char> yes_or_no(1);
+    string yes_or_no;
     cout << "Would you like to see some basic statistics? y/n: ";
-    cin >> yes_or_no[0];
+    cin >> yes_or_no;
 
-    if (yes_or_no[0] == 'y' || yes_or_no[0] == 'Y')
+    if (yes_or_no == "y" || yes_or_no == "Y")
     {
         std::sort(people.begin(), people.end(), sortPancakes);
 
@@ -57,7 +53,7 @@ void basicStatistics()
         std::sort(people.begin(), people.end(), sortPNum); // Reset ordering of people
     }
 
-    else if (yes_or_no[0] == 'n' || yes_or_no[0] == 'N')
+    else if (yes_or_no == "n" || yes_or_no == "N")
     {
         return;
     }
@@ -85,11 +81,11 @@ void choose()
 {
     printFileContents(choice_txt);
 
-    vector<char> choice(1);
-    cin >> choice[0];
+    string choice;
+    cin >> choice;
 
     // If creating new data
-    if (choice[0] == '1')
+    if (choice == "1")
     {
         getPeople();
         check();
@@ -100,13 +96,13 @@ void choose()
     }
 
     // Otherwise we review old .txt output file (NOT FUNCTIONAL)
-    else if (choice[0] == '2')
+    else if (choice == "2")
     {
         showOutFiles();
         waitToExit();
     }
 
-    else if (choice[0] == '3')
+    else if (choice == "3")
     {
         return;
     }
@@ -122,11 +118,11 @@ void choose()
 // vector<People> people, low to high, otherwise exits program.
 void sortPeople()
 {
-    vector<char> yes_or_no(1);
+    string yes_or_no;
     cout << "\nWould you like an ordered list? y/n: ";
-    cin >> yes_or_no[0];
+    cin >> yes_or_no;
 
-    if (yes_or_no[0] == 'y' || yes_or_no[0] == 'Y')
+    if (yes_or_no == "y" || yes_or_no == "Y")
     {
         cout << std::endl;
         std::sort(people.begin(), people.end(), sortPancakes);
@@ -136,7 +132,7 @@ void sortPeople()
         }
     }
 
-    else if (yes_or_no[0] == 'n' || yes_or_no[0] == 'N')
+    else if (yes_or_no == "n" || yes_or_no == "N")
     {
         return;
     }

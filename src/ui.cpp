@@ -1,7 +1,3 @@
-/*
-Functions that are primarily outputting things/interacting with user
-*/
-
 #include <iostream>
 #include <vector>
 #include <algorithm>
@@ -21,12 +17,12 @@ using std::vector;
 // Allow user to check their entries
 void check()
 {
-    vector<char> yes_or_no(1);
+    string yes_or_no;
     cout << "\nDo you want to check your entries? y/n: ";
-    cin >> yes_or_no[0];
+    cin >> yes_or_no;
     cout << '\n';
 
-    if (yes_or_no[0] == 'y' || yes_or_no[0] == 'Y')
+    if (yes_or_no == "y" || yes_or_no == "Y")
     {
         for (auto const &element : people)
         {
@@ -34,16 +30,16 @@ void check()
         }
         cout << '\n';
 
-        vector<char> yes_or_no2(1);
+        string yes_or_no2;
         cout << "Is this correct? y/n: ";
-        cin >> yes_or_no2[0];
+        cin >> yes_or_no2;
 
-        if (yes_or_no2[0] == 'N' || yes_or_no2[0] == 'n')
+        if (yes_or_no2 == "n" || yes_or_no == "N")
         {
             editEntries();
         }
 
-        else if (yes_or_no2[0] == 'Y' || yes_or_no2[0] == 'y')
+        else if (yes_or_no2 == "y" || yes_or_no2 == "Y")
         {
             return;
         }
@@ -54,7 +50,7 @@ void check()
         }
     }
 
-    else if (yes_or_no[0] == 'n' || yes_or_no[0] == 'N')
+    else if (yes_or_no == "n" || yes_or_no == "N")
     {
         return;
     }
@@ -69,12 +65,13 @@ void check()
 // Add user-specified number of people to vector<Person> people;
 void getPeople()
 {
-    int numPeople;
+    // TODO: make in_num_people string. Check if entry is invalid.
+    int in_num_people;
     cout << "\nHow many people are there? ";
-    cin >> numPeople;
+    cin >> in_num_people;
     cout << '\n';
 
-    for (int i = 1; i <= numPeople; ++i)
+    for (int i = 1; i <= in_num_people; ++i)
     {
         Person person(i);
         people.push_back(person);
